@@ -26,8 +26,8 @@
   - Configure kubectl to use minikube
     * kubectl config use-context minikube
 
-**Kafka Setup in Kubernetes**
-Make sure to navigate to the appropriate dir before apply the configurations. 
+**Kafka Setup in Kubernetes** <br>
+Make sure to navigate to the appropriate dir before apply the configurations. <br>
 + Create your own / customize the YAML files provided in the repo.
 + Apply Kafka and Zookeeper configurations
   - kubectl apply -f zookeeper-deployment.yaml
