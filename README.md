@@ -19,8 +19,8 @@
 + Download the kubectl executable file from [Kubernetes website](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/) or use a package manager to download it.
 + Add the kubectl binary to your PATH.
 + Configure kubectl
- - If you're using a managed Kubernetes service (like GKE, EKS, or AKS), follow their specific instructions to configure kubectl.
- - For a local cluster (like Minikube), the configuration is usually automatic.
+   - If you're using a managed Kubernetes service (like GKE, EKS, or AKS), follow their specific instructions to configure kubectl.
+   - For a local cluster (like Minikube), the configuration is usually automatic.
 + Verify installation <br>
   kubectl version --short <br>
   If you see a version being displayed, you have configured kubectl appropriately. 
