@@ -16,7 +16,7 @@
    - docker info
 
 **Kubectl Setup**
-+ Download the curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
++ Download the kubectl executable file from [Kubernetes website](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 
 **MiniKube Setup**
 + Get Minikube <br>
