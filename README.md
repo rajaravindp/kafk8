@@ -50,6 +50,7 @@ Make sure to navigate to the appropriate dir before apply the configurations.
     kafka-topics --create --topic <your-topic-name> --bootstrap-server localhost:29092 --partitions 1
   - Verify topic creation
     kafka-topics --list --bootstrap-server localhost:9092 <br>
+    ![image](https://github.com/user-attachments/assets/cb001f2b-139f-4400-85a2-49b09cc275da)
     You should be able to see your topic listed here.
 
 At this point, you have successfully deployed Kafka on Kubernetes. 
@@ -83,6 +84,8 @@ Navigate to https://hub.docker.com/repositories/<your-user-name> and create a re
     docker push <your-username>/<your-repo-name>:latest <br>
   * cd out <br>
     cd .. <br>
+
+![image](https://github.com/user-attachments/assets/0314a4cd-92cc-4bf0-a1bb-a502648027b2)
 
 **Testing**
 + Access kafka deployment pod <br>
