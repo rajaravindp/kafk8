@@ -45,9 +45,9 @@ Make sure to navigate to the appropriate dir before apply the configurations.
   - Get Kafka deployment pod name
     kubectl get pods
   - Access Kafka deployment pod
-    kubectl exec <kafka-deployment-pod> -it -- bash
+    kubectl exec kafka-deployment-pod -it -- bash
   - Create topic
-    kafka-topics --create --topic <your-topic-name> --bootstrap-server localhost:29092 --partitions 1
+    kafka-topics --create --topic your-topic-name --bootstrap-server localhost:29092 --partitions 1
   - Verify topic creation
     kafka-topics --list --bootstrap-server localhost:9092 <br>
     ![image](https://github.com/user-attachments/assets/cb001f2b-139f-4400-85a2-49b09cc275da)
@@ -67,7 +67,7 @@ At this point, you have successfully deployed Kafka on Kubernetes.
 You should be able to see your pods up and running.
 
 **Create Repo on Docker Hub** <br>
-Navigate to https://hub.docker.com/repositories/<your-user-name> and create a repository. 
+Navigate to https://hub.docker.com/repositories/your-user-name and create a repository. 
 
 **Build and Push Docker Images**
 + Ensure you have Dockerfile for consumer
@@ -79,9 +79,9 @@ Navigate to https://hub.docker.com/repositories/<your-user-name> and create a re
     - To Build Image <br>
       docker build -t consumer . <br>
   * Tag Docker Images <br>
-    docker tag consumer <your-username>/<your-repo-name>:latest <br>
+    docker tag consumer your-username/your-repo-name:latest <br>
   * Push to Hub <br>
-    docker push <your-username>/<your-repo-name>:latest <br>
+    docker push your-username/your-repo-name:latest <br>
   * cd out <br>
     cd .. <br>
 
@@ -89,11 +89,11 @@ Navigate to https://hub.docker.com/repositories/<your-user-name> and create a re
 
 **Testing**
 + Access kafka deployment pod <br>
-  kubectl exec <kafka-deployment-pod-name> -it -- bash <br>
+  kubectl exec kafka-deployment-pod-name -it -- bash <br>
 + Verify <br>
-  kafka-console-consumer --bootstrap-server localhost:29092 --topic <your-topic-name> <br>
+  kafka-console-consumer --bootstrap-server localhost:29092 --topic your-topic-name <br>
   If you cannot see any messages being produced, it is possible that the producer is not currently producing any messages currently. <br>
-  Try: kafka-console-consumer --bootstrap-server localhost:29092 --topic <your-topic-name> --from-beginning <br>
+  Try: kafka-console-consumer --bootstrap-server localhost:29092 --topic your-topic-name --from-beginning <br>
 
 **Troubleshooting**
 + Docker Daemon Issues
@@ -106,8 +106,8 @@ Navigate to https://hub.docker.com/repositories/<your-user-name> and create a re
   * minikube start
 + Kafka Issues
   Check logs
-  * kubectl logs <kafka-pod-name>
-  * kubectl logs <zookeeper-pod-name>
+  * kubectl logs kafka-pod-name
+  * kubectl logs zookeeper-pod-name
 + Network Issues
   * Ensure all services are correctly exposed and reachable.
   * Verify Minikube IP and port mappings if you encounter connectivity issues.
