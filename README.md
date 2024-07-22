@@ -36,10 +36,10 @@ Make sure to navigate to the appropriate dir before apply the configurations.
   - kubectl apply -f kafka-service.yaml
 + Verify Kafka and Zookeeper deployments
   - kubectl get deploy <br>
-    ![image](https://github.com/user-attachments/assets/b9f793ac-4151-48c3-ad44-df689e378bb1)
+    ![image](https://github.com/user-attachments/assets/de227646-6861-42ba-a185-e09bbaa76576)
 + Verify pods
   - kubectl get pods <br>
-    ![image](https://github.com/user-attachments/assets/bbb0f3f2-dc5a-4645-a8ad-640adf9b60dd)
+    ![image](https://github.com/user-attachments/assets/9e45bc5a-54e0-4cef-89c4-c9fb20388e0c)
 + Similarly verify services
 + Create Kafka topic
   - Get Kafka deployment pod name
@@ -58,12 +58,11 @@ At this point, you have successfully deployed Kafka on Kubernetes.
 + Create consumer and producer deployment YAML files and apply them.
   - kubectl apply -f consumer-deploy.yml
   - kubectl apply -f producer-deploy.yml
-    
 + Verify deployments and pod creation
   - kubectl get deploy <br>
-    ![image](https://github.com/user-attachments/assets/3dd51bd3-93d2-41ed-9f1a-f45ac1c5fdaa)
+    ![image](https://github.com/user-attachments/assets/b2d92cf3-c886-4d39-8db5-35706ecf849b)
   - kubectl get po <br>
-    ![image](https://github.com/user-attachments/assets/1d64f0e5-72ef-4dbe-8244-e8637d45a3ad) <br>
+    ![image](https://github.com/user-attachments/assets/3c44b4fd-75fb-465a-9561-6c4afe462aef) <br>
 You should be able to see your pods up and running.
 
 **Create Repo on Docker Hub** <br>
