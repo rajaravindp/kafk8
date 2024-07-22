@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-python-consumer
+  template:
+    metadata:
+      labels:
+        app: my-python-consumer
+    spec:
+      containers:
+      - name: my-python-consumer
+        image:  rajaravindpalepu/my-fetch-app:latest 
+        ports:
+        - containerPort: 9094
+        env:
+        - name: BOOTSTRAP_SERVERS
+          value: "kafka-service:9092"
+        - name: KAFKA_INPUT_TOPIC
+          value: "user-login"
+        - name: KAFKA_OUTPUT_TOPIC
+          value: "processed-data"
+

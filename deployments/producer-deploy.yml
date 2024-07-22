@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-python-producer
+  template:
+    metadata:
+      labels:
+        app: my-python-producer
+    spec:
+      containers:
+      - name: my-python-producer
+        image: mpradeep954/fetch-de-data-gen
+        ports:
+        - containerPort: 9093
+        env:
+        - name: BOOTSTRAP_SERVERS
+          value: "kafka-service:9092"
+        - name: KAFKA_TOPIC
+          value: "user-login"
+
+
