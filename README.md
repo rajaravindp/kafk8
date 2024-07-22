@@ -15,6 +15,9 @@
    - docker --version
    - docker info
 
+**Kubectl Setup**
++ Download the curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+
 **MiniKube Setup**
 + Get Minikube <br>
   - [Download Minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download)
