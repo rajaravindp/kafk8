@@ -82,8 +82,6 @@ Navigate to https://hub.docker.com/repositories/your-user-name and create a repo
     docker tag consumer your-username/your-repo-name:latest <br>
   * Push to Hub <br>
     docker push your-username/your-repo-name:latest <br>
-  * cd out <br>
-    cd .. <br>
 
 ![image](https://github.com/user-attachments/assets/0314a4cd-92cc-4bf0-a1bb-a502648027b2)
 
